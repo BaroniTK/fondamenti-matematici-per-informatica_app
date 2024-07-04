@@ -1,4 +1,4 @@
-# FondamentiApp Guide
+# FondamentiApp
 
 This application is designed to assist users in solving various mathematical exercises, including systems of congruences, RSA calculations, Euclid's algorithm for determining the greatest common divisor (GCD), and graph theory applications such as isomorphism checking and graph property verification.
 
