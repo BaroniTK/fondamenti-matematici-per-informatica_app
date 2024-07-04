@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Grafi">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vector1EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Inserisci il primo vettore separato da virgole"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/vector2EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vector1EditText"
+                android:layout_marginTop="10dp"
+                android:hint="Inserisci il secondo vettore separato da virgole"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/verifyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vector2EditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Verifica" />
+
+            <CheckBox
+                android:id="@+id/treeCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verifyButton"
+                android:layout_marginTop="10dp"
+                android:text="Esiste un albero?" />
+
+            <CheckBox
+                android:id="@+id/hamiltonianCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/treeCheckBox"
+                android:text="Esiste un grafo Hamiltoniano?" />
+
+            <CheckBox
+                android:id="@+id/disconnectedCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hamiltonianCheckBox"
+                android:text="Esiste un grafo sconnesso?" />
+
+            <CheckBox
+                android:id="@+id/twoConnectedCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disconnectedCheckBox"
+                android:text="Esiste un grafo 2-connesso?" />
+
+            <CheckBox
+                android:id="@+id/threeComponentsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twoConnectedCheckBox"
+                android:text="Esistono esattamente tot componenti connesse?" />
+
+            <CheckBox
+                android:id="@+id/connectedCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/threeComponentsCheckBox"
+                android:text="Esiste un grafo connesso?" />
+
+            <CheckBox
+                android:id="@+id/forestaCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connectedCheckBox"
+                android:text="Esiste una foresta?" />
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forestaCheckBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Results"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/processTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resultTextView"
+                android:layout_marginTop="20dp"
+                android:text="Teorema score"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:background="#DDDDDD" />
+
+            <com.example.fondamentiapp.GraphView
+                android:id="@+id/graphView"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@id/processTextView"
+                android:layout_marginTop="20dp" />
+
+            <com.example.fondamentiapp.GraphView
+                android:id="@+id/graphView2"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@id/graphView"
+                android:layout_marginTop="20dp" />
+
+            <com.example.fondamentiapp.GraphView
+                android:id="@+id/graphView3"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@id/graphView2"
+                android:layout_marginTop="20dp" />
+            <com.example.fondamentiapp.GraphView
+                android:id="@+id/graphView4"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_below="@id/graphView3"
+                android:layout_marginTop="20dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:labelVisibilityMode="labeled" />
+
+</RelativeLayout>
