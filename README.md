@@ -64,4 +64,4 @@ To start using FondamentiApp Guide, follow these simple steps:
 This release is available for both Android and iOS platforms, with almost identical functionalities on both systems.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
